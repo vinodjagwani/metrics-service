@@ -1,2 +1,2 @@
 # metrics-service
-rust based microservice with using low memory footprint
+Rust based microservice with using low memory footprint

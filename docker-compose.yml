@@ -1,0 +1,17 @@
+services:
+  metrics-service:
+    build: .
+    image: metrics-service:latest
+    container_name: metrics-service
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      BROADCAST_CAPACITY: "1024"
+      RUST_LOG: "metrics_service=info"
+    restart: unless-stopped
+    # Small footprint is the point of this service — cap it to prove it.
+    deploy:
+      resources:
+        limits:
+          memory: 64M

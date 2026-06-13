@@ -1,0 +1,10 @@
+# Rust build output
+/target
+
+# Backups / editor cruft
+**/*.rs.bk
+*.pdb
+
+# Env files
+.env
+.env.*
